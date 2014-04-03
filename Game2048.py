@@ -129,6 +129,7 @@ class Play2048(PlayingField, game2048):
 
     def __init__(self, timeout = 10, wait = .5):
         game2048.__init__(self, timeout)
+        PlayingField.__init__(self)
         self.wait = wait
         self.setField(self.browser)
 

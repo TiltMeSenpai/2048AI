@@ -16,4 +16,3 @@ class game2048:
         self.browser.get('http://gabrielecirulli.github.io/2048/')
         self.browser.maximize_window()
         self.input = self.browser.find_element_by_class_name('tile-container')
-        PlayingField.__init__(self)
