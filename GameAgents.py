@@ -17,7 +17,7 @@ class ProtoAgent(Play2048):
 
 class StupidAgent(ProtoAgent):
     def play(self):
-        print(self.move(self.keys[random.randint(0,3)]))
+        self.move(self.keys[random.randint(0,3)])
 
 class ThreesAgent(ProtoAgent):
     everyOther = False
