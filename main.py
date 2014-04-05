@@ -6,7 +6,7 @@ def get_agents():
     return {i[0] : i[1] for i in inspect.getmembers(GameAgents) if "Agent" in i[0] and not i[0] is "ProtoAgent"}
 
 def main(agent, timeout=1, wait=.1, lookahead_value=.5, depth = 1):
-    game = {i[0] : i[1] for i in inspect.getmembers(GameAgents)}[str(agent)](timeout, wait, lookahead_value, depth)
+    game = get_agents()[str(agent)](timeout, wait, lookahead_value, depth)
     while True:
         game.play()
         if not game.is_playable():
